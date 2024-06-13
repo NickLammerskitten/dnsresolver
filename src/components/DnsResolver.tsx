@@ -80,7 +80,13 @@ export function DnsResolver() {
             </ul>
 
             <div className={"flex mb-1"}>
-                <button onClick={resolveDomains}>Resolve domains</button>
+                <button onClick={resolveDomains} className={"mr-1"}>Resolve domains</button>
+
+                {csvResult.length > 0 &&
+                    <button onClick={() => CsvDownloader(csvResult, "dnsResults.csv")}>
+                        Download as CSV
+                    </button>
+                }
             </div>
 
             <table>
@@ -122,20 +128,6 @@ export function DnsResolver() {
                 })}
                 </tbody>
             </table>
-
-
-            {csvResult.length > 0 &&
-                <div className={"flex"}>
-                    <input
-                        className={"mr-1"}
-                        value={csvResult}
-                        onChange={(e) => setCsvResult(e.target.value)}
-                    />
-                    <button onClick={() => CsvDownloader(csvResult, "dnsResults.csv")}>
-                        Download as CSV
-                    </button>
-                </div>
-            }
         </div>
     )
 }
