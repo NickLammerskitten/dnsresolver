@@ -35,6 +35,10 @@ export function CsvFileInput({domains, handleDomainsChange}: CsvFileInputProps) 
             const domainName = dataElement["Domain name"];
             const value = dataElement["Value"];
 
+            if (!(domainName && value)) {
+                return;
+            }
+
             convertedData.push({
                 domainName: domainName,
                 value: value
