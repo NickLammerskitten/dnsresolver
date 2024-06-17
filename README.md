@@ -1,12 +1,7 @@
-# DNS Resolver - Code lokal starten
+# DNS Resolver
 
-- Code klonen
-  - GitHub > Code > HTTPS (link kopieren)
-  - CMD/Terminal öffen > In Zielordner wecheln (`cd [Zielordner]`) > `git clone "URL vom Repository`
-- Node.js und npm installieren 
-  - (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Auf Server mszrds09 einloggen
 - Code starten
-  - wenn nicht sowieso schon, erneut in Zielordner wechseln, wo das Repository nun geklont liegt
-  - `npm install` zum Installieren der Dependencies
+  - Zu Zielordner wechseln, wo der code liegt (navigieren zu C: mittels `cd ..` `cd ..` `cd dnsresolver`)
   - `npm run dev` zum Starten des Codes
     - nun ist der Code unter http://localhost:5173/ erreichbar!
